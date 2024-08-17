@@ -3,39 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="header"></header>
-    <main class="main">
-        <section class="content">
-            <img class="content__image" src="./Assets/Logo.png" alt="Logo" > 
-            <textarea required rows="6" id="texto" class="content__textarea" 
+  <main class="container | disFlex">
+    <header> <img class="container__logo" src="./Assets/Logo.png" alt="logo"> </header>
+        <section class="content | disFlexDir">
+            <textarea class="content__textarea | clrtextBgClr" rows="6" required  id="texto"  
             type="text" placeholder="Ingrese el texto aqui"></textarea>
-            <br><br>
-            <p class="content__alert">
-                <img class="content__alert-image" src="./Assets/Vector.svg" alt="Info" > 
-                Solo letras minúsculas y sin acentos
-            </p>             
-            <div class="btns">
-                <button id="encriptar" class="btns__button--primary">Encriptar</button>
-                <button id="desencriptar" class="btns__button--secondary">Desencriptar</button>
+
+            <div class="content__alert | disFlex">
+                <img class="contet__image" width="16px" height="16px" src="/Assets/Vector.svg" alt="alert">
+                <p class="content__msg">Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="btns| disFlex" >
+                <button id="encriptar" class="btns__button--primary | btns">
+                    Encriptar</button>
+                <button id="desencriptar" class=" btns__button--secondary | btns">
+                    Desencriptar</button>
             </div>
         </section>
-        <section class="aside">
-            <div id="lado" class="aside__message">
+
+        <aside class="aside ">
+            <div class="aside__content | disFlexDir">
                 <p id="encrypt" class="aside__encrypt"></p>
-                <img id="imagen" class="aside__image" src="./Assets/Muñeco.png" alt="Muñeco" >
-                <p id="aText" class="aside__text">Ningún mensaje fue encontrado</p>
-                <p id="sText" class="aside__subtext">Ingresa el texto que desees encriptar o desencriptar.</p>
-                <button id="abtn" class="aside__btncopy" onclick="copiarTexto()">Copiar</button>
-               
+                <img class="aside__image" id="imagen" src="./Assets/Muñeco.png" alt="monito">
+               <div class="aside__contentText | disFlexDir"> 
+                    <p id="aText" class="aside__text">
+                        Ningún mensaje fue encontrado </p>
+                    <p id="sText" class="aside__subtext"> 
+                        Ingresa el texto que desees encriptar o desencriptar.
+                    </p>
+                </div>
+                <button id="abtn" class="aside__btn--copy | btns" onclick="copiarTexto()">Copiar</button>
             </div>
-            
-        </section>
-    </main>
-  
-    <script src="index.js"></script>
+         </aside>
+
+        <footer>
+
+        </footer>
+
+  </main> 
+<script src="./index.js"></script>
 </body>
 </html>
